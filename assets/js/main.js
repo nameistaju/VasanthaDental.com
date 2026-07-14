@@ -41,11 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Hide Branded Loading Screen on Page Load
 window.addEventListener('load', () => {
-  const loader = document.getElementById('page-loader');
-  if (loader) {
+  const pageLoader = document.getElementById('page-loader');
+  if (pageLoader) {
     setTimeout(() => {
-      loader.classList.add('hidden');
-      setTimeout(() => loader.remove(), 600);
-    }, 4500); // Display for 4.5 seconds to allow animations to finish
+      pageLoader.classList.add('hidden');
+      setTimeout(() => pageLoader.remove(), 600);
+    }, 1000); // Quick 1s display for smooth loading UX
+  }
+
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add('fade-out');
+      setTimeout(() => loadingScreen.remove(), 600);
+    }, 1000); // Quick 1s display for results page loading screen
   }
 });

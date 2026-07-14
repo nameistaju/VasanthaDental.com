@@ -64,9 +64,9 @@ const BookingModal = (() => {
         
         <div class="modal-actions">
           <button type="button" class="btn btn-modal-cancel">Cancel</button>
-          <button type="submit" class="btn btn-modal-submit">
+          <button type="submit" class="btn btn-modal-submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
             <span>Send via WhatsApp</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.758.459 3.475 1.332 4.992l-1.356 4.962 5.076-1.332c1.47.801 3.12 1.224 4.806 1.224h.006c5.502 0 9.984-4.482 9.984-9.988 0-2.667-1.038-5.175-2.928-7.062-1.89-1.89-4.398-2.928-7.062-2.928zm5.832 14.154c-.252.708-1.464 1.302-2.022 1.362-.516.054-1.188.084-3.414-.84-2.844-1.176-4.686-4.062-4.83-4.248-.138-.186-1.128-1.5-1.128-2.862 0-1.362.708-2.028.966-2.304.252-.276.558-.342.744-.342.186 0 .372.006.534.012.168.006.396-.066.618.474.228.558.78 1.902.846 2.034.066.132.108.288.018.468-.09.18-.132.288-.264.444-.132.15-.276.336-.396.462-.132.138-.27.288-.114.558.156.27.69 1.134 1.482 1.842.822.732 1.512.96 1.728 1.074.216.114.342.096.468-.048.126-.144.54-.63.684-.846.144-.216.288-.18.486-.108.198.072 1.254.594 1.464.702.21.108.348.162.402.252.054.09.054.528-.198 1.236z"/></svg>
+            <i data-lucide="message-circle" style="width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2px;"></i>
           </button>
         </div>
       </form>
@@ -84,6 +84,10 @@ const BookingModal = (() => {
     modalOverlay.className = 'booking-modal-overlay';
     modalOverlay.innerHTML = modalHTML;
     document.body.appendChild(modalOverlay);
+
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
 
     setupEventListeners();
   };

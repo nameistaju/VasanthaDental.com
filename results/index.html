@@ -20,7 +20,7 @@
   <!-- Loading Screen -->
   <div id="loading-screen" class="loading-screen">
     <div class="loading-content">
-      <img src="../assets/images/branding/logo.png" alt="Vasantha Dental Logo" class="loading-logo">
+      <img src="../assets/images/branding/logo.png" alt="Vasantha Dental Clinic and Implant Center logo" class="loading-logo">
       <div class="loading-spinner"></div>
     </div>
   </div>
@@ -31,53 +31,76 @@
   <!-- ==========================================
        HEADER & NAVIGATION
        ========================================== -->
-  <header class="header scrolled" id="header" style="position: sticky;">
-    <div class="header-main-nav">
-      <div class="container main-nav-container">
-        <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
-          <img src="../assets/images/branding/logo.png" alt="Vasantha Dental Logo" style="height: 40px; width: auto;">
-          <span class="logo-text" style="font-family: var(--font-headings); font-weight: 800; font-size: 1.35rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">Vasantha Dental</span>
-        </a>
-        
-        <nav class="nav-links" id="main-nav">
-          <a href="../index.html" class="nav-link">Home</a>
-          <a href="../index.html#about" class="nav-link">About</a>
-          <a href="../index.html#treatments" class="nav-link">Treatments</a>
-          <a href="index.html" class="nav-link active">Results</a>
-          <a href="../index.html#gallery" class="nav-link">Gallery</a>
-          <a href="../index.html#testimonials" class="nav-link">Testimonials</a>
-          <a href="../index.html#faq" class="nav-link">FAQ</a>
-          <a href="../index.html#contact" class="nav-link">Contact</a>
-        </nav>
+  <header class="header scrolled results-fixed-header" id="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo" aria-label="Vasantha Dental Clinic Home">
+        <img src="../assets/images/branding/logo.png" alt="Vasantha Dental Clinic and Implant Center logo" class="logo-img">
+        <span class="logo-text">Vasantha Dental</span>
+      </a>
 
-        <div class="header-ctas">
-          <button class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem; border: none; cursor: pointer;" data-open-booking>Book Appointment</button>
-        </div>
+      <nav class="nav-links" id="main-nav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#treatments" class="nav-link">Treatments</a>
+        <a href="index.html" class="nav-link active">Results</a>
+        <a href="../index.html#gallery" class="nav-link">Gallery</a>
+        <a href="../index.html#testimonials" class="nav-link">Testimonials</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
 
-        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
-        </button>
-      </div>
+      <a href="tel:+919703294358" class="btn btn-primary nav-cta" style="display: inline-flex; align-items: center; gap: 8px;">
+        <i data-lucide="phone-call" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2px;"></i>
+        <span>Call: +91 9703294358</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">x</button>
+      <nav class="mobile-nav">
+        <a href="../index.html" class="mobile-nav-link">Home</a>
+        <a href="../index.html#about" class="mobile-nav-link">About</a>
+        <a href="../index.html#treatments" class="mobile-nav-link">Treatments</a>
+        <a href="index.html" class="mobile-nav-link">Results</a>
+        <a href="../index.html#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="../index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+        <a href="../index.html#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <a href="tel:+919703294358" class="btn btn-primary" style="margin-top: 24px; width: 100%; display: block; text-align: center;">Call: +91 9703294358</a>
     </div>
   </header>
 
   <!-- ==========================================
-       PAGE HERO
+       RESULTS HERO
        ========================================== -->
-  <section class="section-padding" style="background-color: var(--primary); color: var(--white); text-align: center; padding: 60px 0;">
-    <div class="container">
-      <h1 style="color: var(--white); font-size: 3rem; margin-bottom: 12px;">Smile Transformations</h1>
-      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; max-width: 600px; margin: 0 auto;">View authentic before and after clinical outcomes completed by our MDS specialists.</p>
+  <section class="results-hero" aria-labelledby="results-hero-title">
+    <picture class="results-hero-media">
+      <source media="(max-width: 767px)" srcset="../assets/images/branding/ResultsHero_mobile.webp">
+      <img src="../assets/images/branding/ResultsHero_Desktop.webp" alt="Smile gallery results at Vasantha Dental Clinic Visakhapatnam" class="results-hero-img" decoding="async">
+    </picture>
+    <div class="results-hero-overlay"></div>
+    <div class="container results-hero-content">
+      <span class="section-eyebrow results-hero-label">SMILE GALLERY</span>
+      <h1 id="results-hero-title">Proven Smile Transformations</h1>
+      <p>Explore real before &amp; after smile transformations from patients treated at Vasantha Dental Clinic.</p>
     </div>
   </section>
 
   <!-- ==========================================
-       BEFORE / AFTER SHOWCASE WITH FILTERING
+       BEFORE / AFTER VISUAL SHOWCASE
        ========================================== -->
-  <section class="section-padding" style="background-color: var(--light-bg);">
+  <section class="results-gallery-section section-padding">
     <div class="container">
-      <!-- Filter Navigation -->
-      <div class="filter-nav">
+      <div class="section-heading results-gallery-heading">
+        <span class="section-eyebrow">TREATMENT OUTCOMES</span>
+        <h2>Real Results, Beautifully Restored Smiles</h2>
+        <p class="section-desc">Browse the gallery and use the slider on each image to compare the transformation.</p>
+      </div>
+
+      <div class="filter-nav results-filter-nav" aria-label="Filter smile gallery">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="implants">Implants</button>
         <button class="filter-btn" data-filter="smile-makeover">Smile Makeover</button>
@@ -85,398 +108,344 @@
         <button class="filter-btn" data-filter="root-canal">Root Canal</button>
       </div>
 
-      <!-- Transformations Grid -->
-      <div class="grid grid-3" id="ba-results-grid">
-        
-        <!-- Case 1: Dental Implants -->
-        <article class="ba-premium-card" data-category="implants">
-          <div class="ba-slider-wrap">
+      <div class="results-showcase-grid" id="ba-results-grid">
+        <article class="result-showcase-card ba-premium-card" data-category="implants">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/DentalImplants_after.png.webp" alt="Implants Restoration After">
+                <img src="../assets/images/results/DentalImplants_after.png.webp" alt="Dental Implants after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/DentalImplants_before.webp" alt="Implants Restoration Before">
+                <img src="../assets/images/results/DentalImplants_before.webp" alt="Dental Implants before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Dental Implants</h3>
-            <a href="#" data-open-booking data-treatment="Dental Implants" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Full mouth smile restoration using fixed implant-supported bridges, returning full chewing function.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">3 Months</span>
-              <span class="ba-meta-pill ba-pill-blue">Fixed Implants</span>
-            </div>
+            <p class="ba-result-summary">Natural-looking implants designed to restore confident smiles.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Dental Implants">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 2: Dentures -->
-        <article class="ba-premium-card" data-category="implants">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="implants">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Dentures_after.webp" alt="Denture Treatment After">
+                <img src="../assets/images/results/Dentures_after.webp" alt="Dentures after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/dentures_before.webp" alt="Denture Treatment Before">
+                <img src="../assets/images/results/dentures_before.webp" alt="Dentures before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
-            <h3 class="ba-treatment-name">Denture Treatment</h3>
-            <a href="#" data-open-booking data-treatment="Dentures" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Custom flexible partial dentures restoring natural smile aesthetics, facial volume, and speech clarity.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">2 Weeks</span>
-              <span class="ba-meta-pill ba-pill-blue">Flexible Denture</span>
-            </div>
+          <div class="result-card-info">
+            <h3 class="ba-treatment-name">Dentures</h3>
+            <p class="ba-result-summary">Custom dentures crafted to restore comfort, speech, and smile aesthetics.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Dentures">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 3: Teeth Whitening -->
-        <article class="ba-premium-card" data-category="smile-makeover">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="smile-makeover">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Teeth Whitening_after.webp" alt="Teeth Whitening After">
+                <img src="../assets/images/results/Teeth Whitening_after.webp" alt="Teeth Whitening after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Teeth Whitening_before.webp" alt="Teeth Whitening Before">
+                <img src="../assets/images/results/Teeth Whitening_before.webp" alt="Teeth Whitening before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Teeth Whitening</h3>
-            <a href="#" data-open-booking data-treatment="Teeth Whitening" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">In-office clinic teeth whitening removing deep stains and yellowing in a single session.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">1 Session</span>
-              <span class="ba-meta-pill ba-pill-blue">Laser Whitening</span>
-            </div>
+            <p class="ba-result-summary">Professional whitening designed to brighten stained or yellowed teeth.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Teeth Whitening">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 4: Smile Makeover -->
-        <article class="ba-premium-card" data-category="smile-makeover">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="smile-makeover">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Smile Makeover_after.webp" alt="Smile Makeover After">
+                <img src="../assets/images/results/Smile Makeover_after.webp" alt="Smile Makeover after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Smile Makeover_before.webp" alt="Smile Makeover Before">
+                <img src="../assets/images/results/Smile Makeover_before.webp" alt="Smile Makeover before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Smile Makeover</h3>
-            <a href="#" data-open-booking data-treatment="Smile Makeover" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Aesthetic corrections to teeth alignment, symmetry, and shade using customized porcelain veneers.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">3 Weeks</span>
-              <span class="ba-meta-pill ba-pill-blue">Veneers &amp; Crowns</span>
-            </div>
+            <p class="ba-result-summary">Balanced smile design improving shade, symmetry, and confidence.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Smile Makeover">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 5: Crowns & Bridges -->
-        <article class="ba-premium-card" data-category="implants">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="root-canal">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Root Canal_after.webp" alt="Zirconia Crowns After">
+                <img src="../assets/images/results/Root Canal_after.webp" alt="Root Canal after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Root Canal_before.webp" alt="Zirconia Crowns Before">
+                <img src="../assets/images/results/Root Canal_before.webp" alt="Root Canal before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
-            <h3 class="ba-treatment-name">Crowns &amp; Bridges</h3>
-            <a href="#" data-open-booking data-treatment="Smile Makeover" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Metal-free ceramic zirconia crowns placed to protect cracked and root canal treated molar teeth.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">1 Week</span>
-              <span class="ba-meta-pill ba-pill-blue">Zirconia Crown</span>
-            </div>
+          <div class="result-card-info">
+            <h3 class="ba-treatment-name">Root Canal</h3>
+            <p class="ba-result-summary">Pain-free treatment preserving your natural tooth.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Root Canal">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 6: Dental Fillings -->
-        <article class="ba-premium-card" data-category="smile-makeover">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="smile-makeover">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Dental Fillings_after.webp" alt="Tooth Colored Fillings After">
+                <img src="../assets/images/results/Dental Fillings_after.webp" alt="Dental Fillings after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Dental Fillings_before.webp" alt="Tooth Colored Fillings Before">
+                <img src="../assets/images/results/Dental Fillings_before.webp" alt="Dental Fillings before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Dental Fillings</h3>
-            <a href="#" data-open-booking data-treatment="Dental Fillings" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Tooth-colored composite restoration correcting decay cavities, mimicking natural enamel.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">30 Mins</span>
-              <span class="ba-meta-pill ba-pill-blue">Composite Bonding</span>
-            </div>
+            <p class="ba-result-summary">Tooth-colored restorations that blend naturally with your smile.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Dental Fillings">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 7: Preventive Dentistry -->
-        <article class="ba-premium-card" data-category="smile-makeover">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="smile-makeover">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Preventive Dentistry_after.webp" alt="Preventive Clean After">
+                <img src="../assets/images/results/Preventive Dentistry_after.webp" alt="Preventive Dentistry after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Preventive Dentistry_before.webp" alt="Preventive Clean Before">
+                <img src="../assets/images/results/Preventive Dentistry_before.webp" alt="Preventive Dentistry before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
-            <h3 class="ba-treatment-name">Preventive Scaling</h3>
-            <a href="#" data-open-booking data-treatment="Preventive Dentistry" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Removal of calcified tartar buildup, restoring blood-free, healthy pink gum margins.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">45 Mins</span>
-              <span class="ba-meta-pill ba-pill-blue">Deep Scaling</span>
-            </div>
+          <div class="result-card-info">
+            <h3 class="ba-treatment-name">Preventive Dentistry</h3>
+            <p class="ba-result-summary">Clean, healthy-looking results through careful preventive care.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Preventive Dentistry">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 8: Root Canal Treatment -->
-        <article class="ba-premium-card" data-category="root-canal">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="braces">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Root Canal_after.webp" alt="Root Canal Therapy After">
+                <img src="../assets/images/results/Braces Treatment_after.webp" alt="Braces Treatment after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Root Canal_before.webp" alt="Root Canal Therapy Before">
+                <img src="../assets/images/results/Braces Treatment_before.webp" alt="Braces Treatment before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
-            <h3 class="ba-treatment-name">Root Canal Treatment</h3>
-            <a href="#" data-open-booking data-treatment="Root Canal" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Microscopic nerve chamber cleanup and filling, immediately stopping deep toothache pain.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">1 Session</span>
-              <span class="ba-meta-pill ba-pill-blue">Single Visit RCT</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Case 9: Braces Treatment -->
-        <article class="ba-premium-card" data-category="braces">
-          <div class="ba-slider-wrap">
-            <div class="ba-slider-container">
-              <div class="ba-img-after">
-                <img src="../assets/images/results/Braces Treatment_after.webp" alt="Braces Correction After">
-                <span class="ba-label ba-label-after">After</span>
-              </div>
-              <div class="ba-img-before">
-                <img src="../assets/images/results/Braces Treatment_before.webp" alt="Braces Correction Before">
-                <span class="ba-label ba-label-before">Before</span>
-              </div>
-              <div class="ba-handle">
-                <div class="ba-handle-line"></div>
-                <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </div>
-                <div class="ba-handle-line"></div>
-              </div>
-              <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
-            </div>
-          </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Braces Treatment</h3>
-            <a href="#" data-open-booking data-treatment="Braces" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Correction of severe crowding and crooked teeth using custom fixed orthodontic ceramic brackets.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">12 Months</span>
-              <span class="ba-meta-pill ba-pill-blue">Ceramic Braces</span>
-            </div>
+            <p class="ba-result-summary">Guided alignment to improve smile balance and bite harmony.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Braces">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 10: Clear Aligners -->
-        <article class="ba-premium-card" data-category="braces">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="braces">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Clear Aligners_after.webp" alt="Clear Aligners Therapy After">
+                <img src="../assets/images/results/Clear Aligners_after.webp" alt="Clear Aligners after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Clear Aligners_before.webp" alt="Clear Aligners Therapy Before">
+                <img src="../assets/images/results/Clear Aligners_before.webp" alt="Clear Aligners before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
+          <div class="result-card-info">
             <h3 class="ba-treatment-name">Clear Aligners</h3>
-            <a href="#" data-open-booking data-treatment="Clear Aligners" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Closing of front gaps and correcting teeth alignments using comfortable clear plastic aligner trays.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">8 Months</span>
-              <span class="ba-meta-pill ba-pill-blue">Clear Aligners</span>
-            </div>
+            <p class="ba-result-summary">Discreet aligner therapy for straighter, more confident smiles.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Clear Aligners">Book Consultation</button>
           </div>
         </article>
-
-        <!-- Case 11: Wisdom Tooth Removal -->
-        <article class="ba-premium-card" data-category="root-canal">
-          <div class="ba-slider-wrap">
+        <article class="result-showcase-card ba-premium-card" data-category="root-canal">
+          <div class="ba-slider-wrap result-slider-wrap">
             <div class="ba-slider-container">
               <div class="ba-img-after">
-                <img src="../assets/images/results/Wisdom Tooth_after.webp" alt="Wisdom Tooth Extraction After">
+                <img src="../assets/images/results/Wisdom Tooth_after.webp" alt="Wisdom Tooth Removal after treatment" loading="lazy">
                 <span class="ba-label ba-label-after">After</span>
               </div>
               <div class="ba-img-before">
-                <img src="../assets/images/results/Wisdom Tooth_before.webp" alt="Wisdom Tooth Extraction Before">
+                <img src="../assets/images/results/Wisdom Tooth_before.webp" alt="Wisdom Tooth Removal before treatment" loading="lazy">
                 <span class="ba-label ba-label-before">Before</span>
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
                 <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <i data-lucide="chevrons-left-right" style="width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.4px;"></i>
                 </div>
                 <div class="ba-handle-line"></div>
               </div>
               <input type="range" class="ba-range-input" min="0" max="100" value="50" aria-label="Before after comparison slider">
             </div>
           </div>
-          <div class="ba-card-info">
-            <h3 class="ba-treatment-name">Wisdom Tooth Extraction</h3>
-            <a href="#" data-open-booking data-treatment="Wisdom Tooth Removal" class="ba-case-link">View Full Case →</a>
-          </div>
-            <p class="ba-result-summary">Surgical extraction of an impacted wisdom tooth, stopping decay and relieving jaw compression.</p>
-            <div class="ba-meta-row">
-              <span class="ba-meta-pill">40 Mins</span>
-              <span class="ba-meta-pill ba-pill-blue">Oral Surgery</span>
-            </div>
+          <div class="result-card-info">
+            <h3 class="ba-treatment-name">Wisdom Tooth Removal</h3>
+            <p class="ba-result-summary">Gentle surgical care to resolve painful or impacted wisdom teeth.</p>
+            <button class="btn btn-outline result-card-btn" data-open-booking data-booking-mode="details" data-treatment="Wisdom Tooth Removal">Book Consultation</button>
           </div>
         </article>
+      </div>
 
+      <div class="results-load-more-wrap">
+        <button class="btn btn-primary results-load-more" id="results-load-more" type="button">Load More</button>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       WHY TRUST RESULTS
+       ========================================== -->
+  <section class="results-trust-section section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow">WHY TRUST OUR RESULTS</span>
+        <h2>Outcome-Focused Dental Care</h2>
+        <p class="section-desc">Every smile is planned with clinical precision, patient comfort, and long-term confidence in mind.</p>
+      </div>
+      <div class="results-trust-grid">
+        <div class="results-trust-item">
+          <img src="../assets/images/Google Rating Icon.png" alt="" class="results-trust-icon" loading="lazy">
+          <h3>4.9 Google Rating</h3>
+          <p>Trusted by patients across Visakhapatnam.</p>
+        </div>
+        <div class="results-trust-item">
+          <img src="../assets/images/Happy Patients.png" alt="" class="results-trust-icon" loading="lazy">
+          <h3>20,000+ Smiles</h3>
+          <p>Care delivered across everyday and complex needs.</p>
+        </div>
+        <div class="results-trust-item">
+          <img src="../assets/images/Experienced Dental Team.png" alt="" class="results-trust-icon" loading="lazy">
+          <h3>MDS Specialists</h3>
+          <p>Specialist-led planning for reliable outcomes.</p>
+        </div>
+        <div class="results-trust-item">
+          <img src="../assets/images/Safe & Hygienic Care.png" alt="" class="results-trust-icon" loading="lazy">
+          <h3>Safe &amp; Hygienic</h3>
+          <p>Strict sterilization standards for every visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RESULTS CTA
+       ========================================== -->
+  <section class="results-cta-section">
+    <div class="container">
+      <div class="results-cta-panel">
+        <div class="results-cta-overlay"></div>
+        <div class="results-cta-content">
+          <h2>Ready to Transform Your Smile?</h2>
+          <p>Book your consultation today and let us help you achieve a healthier, more confident smile.</p>
+          <div class="results-cta-actions">
+            <button class="results-glass-btn" data-open-booking data-booking-mode="booking">
+              <i data-lucide="calendar-check"></i>
+              <span>Book Appointment</span>
+            </button>
+            <button class="results-glass-btn" data-open-booking data-booking-mode="details">
+              <i data-lucide="message-circle"></i>
+              <span>WhatsApp Consultation</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ==========================================
        FOOTER
        ========================================== -->
@@ -514,22 +483,34 @@
 
         <div>
           <h4 class="footer-title">Contact Us</h4>
-          <div class="footer-contact-item" style="display: flex; flex-direction: column; gap: 12px;">
-            <div class="footer-contact-text">
-              <h5>Location</h5>
-              <p><a href="https://maps.app.goo.gl/vK3Z7jBwz2N8X6i59" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; transition: color var(--transition-fast);">1-56-23, Bank Of India Road, Venkojipalem, Sector 2, MVP Colony, Visakhapatnam 530017</a></p>
+          <div class="footer-contact-item" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="footer-contact-text" style="display: flex; align-items: flex-start; gap: 12px;">
+              <i data-lucide="map-pinned" style="width: 20px; height: 20px; stroke: var(--secondary); stroke-width: 2.5px; fill: none; margin-top: 4px; flex-shrink: 0;"></i>
+              <div>
+                <h5 style="margin-bottom: 2px;">Location</h5>
+                <p><a href="https://maps.app.goo.gl/vK3Z7jBwz2N8X6i59" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color var(--transition-fast);">1-56-23, Bank Of India Road, MVP Colony, Visakhapatnam 530017</a></p>
+              </div>
             </div>
-            <div class="footer-contact-text">
-              <h5>Call / WhatsApp</h5>
-              <p><a href="tel:+919703294358" style="color: var(--muted); text-decoration: none; transition: color var(--transition-fast);">+91 9703294358</a> | <a href="https://wa.me/919703294358" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; transition: color var(--transition-fast);">Chat on WhatsApp</a></p>
+            <div class="footer-contact-text" style="display: flex; align-items: flex-start; gap: 12px;">
+              <i data-lucide="phone-call" style="width: 20px; height: 20px; stroke: var(--secondary); stroke-width: 2.5px; fill: none; margin-top: 4px; flex-shrink: 0;"></i>
+              <div>
+                <h5 style="margin-bottom: 2px;">Call / WhatsApp</h5>
+                <p><a href="tel:+919703294358" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color var(--transition-fast);">+91 9703294358</a> | <a href="https://wa.me/919703294358" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color var(--transition-fast);">Chat</a></p>
+              </div>
             </div>
-            <div class="footer-contact-text">
-              <h5>Clinic Hours</h5>
-              <p style="color: var(--muted);">Mon – Sat: 10:00 AM – 8:00 PM</p>
+            <div class="footer-contact-text" style="display: flex; align-items: flex-start; gap: 12px;">
+              <i data-lucide="clock-3" style="width: 20px; height: 20px; stroke: var(--secondary); stroke-width: 2.5px; fill: none; margin-top: 4px; flex-shrink: 0;"></i>
+              <div>
+                <h5 style="margin-bottom: 2px;">Clinic Hours</h5>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Mon - Sat: 10:00 AM - 8:00 PM</p>
+              </div>
             </div>
-            <div class="footer-contact-text">
-              <h5>Email Address</h5>
-              <p><a href="mailto:info@vasanthadental.com" style="color: var(--muted); text-decoration: none; transition: color var(--transition-fast);">info@vasanthadental.com</a></p>
+            <div class="footer-contact-text" style="display: flex; align-items: flex-start; gap: 12px;">
+              <i data-lucide="mail" style="width: 20px; height: 20px; stroke: var(--secondary); stroke-width: 2.5px; fill: none; margin-top: 4px; flex-shrink: 0;"></i>
+              <div>
+                <h5 style="margin-bottom: 2px;">Email</h5>
+                <p><a href="mailto:info@vasanthadental.com" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color var(--transition-fast);">info@vasanthadental.com</a></p>
+              </div>
             </div>
           </div>
         </div>
@@ -544,81 +525,62 @@
   <!-- Scripts -->
   <script src="../assets/js/main.js" defer></script>
   <script src="../assets/js/navigation.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="../assets/js/carousel.js" defer></script>
   <script src="../assets/js/booking-modal.js" defer></script>
   <script src="../assets/js/utilities.js" defer></script>
 
-  <!-- Inline Script for Results page Filtering and Slider Init -->
+  <!-- Inline Script for Results page Filtering and Load More -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Initialise Before/After Sliders on Results Page
-      const cards = document.querySelectorAll('.ba-premium-card');
-      cards.forEach(card => {
-        const container = card.querySelector('.ba-slider-container');
-        const beforeImg = card.querySelector('.ba-img-before');
-        const handle = card.querySelector('.ba-handle');
-        const range = card.querySelector('.ba-range-input');
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
 
-        if (!container || !beforeImg || !handle || !range) return;
-
-        let currentPosition = 50;
-        let ticking = false;
-
-        const updateSlider = () => {
-          beforeImg.style.clipPath = `inset(0 ${100 - currentPosition}% 0 0)`;
-          handle.style.left = '0';
-          const containerWidth = container.clientWidth;
-          const x = (currentPosition / 100) * containerWidth;
-          handle.style.transform = `translate3d(${x}px, 0, 0)`;
-          range.value = currentPosition;
-          ticking = false;
-        };
-
-        const requestUpdate = (pos) => {
-          currentPosition = Math.max(0, Math.min(100, pos));
-          if (!ticking) {
-            requestAnimationFrame(updateSlider);
-            ticking = true;
-          }
-        };
-
-        range.addEventListener('input', () => requestUpdate(range.value));
-        requestUpdate(Number(range.value) || 50);
-
-        window.addEventListener('resize', () => requestUpdate(currentPosition));
-      });
-
-      // 2. Filter Functionality
       const filterButtons = document.querySelectorAll('.filter-btn');
       const resultsGrid = document.getElementById('ba-results-grid');
-      const cases = resultsGrid ? resultsGrid.querySelectorAll('.ba-premium-card') : [];
+      const cards = resultsGrid ? Array.from(resultsGrid.querySelectorAll('.ba-premium-card')) : [];
+      const loadMoreBtn = document.getElementById('results-load-more');
+      const initialVisible = 6;
+      const loadStep = 3;
+      let activeFilter = 'all';
+      let visibleCount = initialVisible;
 
-      filterButtons.forEach(btn => {
+      const getFilteredCards = () => cards.filter((card) => activeFilter === 'all' || card.dataset.category === activeFilter);
+
+      const renderCards = () => {
+        const filteredCards = getFilteredCards();
+
+        cards.forEach((card) => {
+          const matches = filteredCards.includes(card);
+          const index = filteredCards.indexOf(card);
+          const shouldShow = matches && index < visibleCount;
+
+          card.classList.toggle('is-hidden-by-filter', !matches);
+          card.classList.toggle('is-hidden-by-load', matches && !shouldShow);
+        });
+
+        if (loadMoreBtn) {
+          loadMoreBtn.classList.toggle('is-hidden', visibleCount >= filteredCards.length);
+        }
+      };
+
+      filterButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          // Remove active class from buttons
-          filterButtons.forEach(b => b.classList.remove('active'));
+          filterButtons.forEach((button) => button.classList.remove('active'));
           btn.classList.add('active');
-
-          const filterValue = btn.getAttribute('data-filter');
-
-          cases.forEach(c => {
-            const category = c.getAttribute('data-category');
-            if (filterValue === 'all' || category === filterValue) {
-              c.style.display = 'block';
-              setTimeout(() => {
-                c.style.opacity = '1';
-                c.style.transform = 'scale(1)';
-              }, 50);
-            } else {
-              c.style.opacity = '0';
-              c.style.transform = 'scale(0.95)';
-              setTimeout(() => {
-                c.style.display = 'none';
-              }, 300);
-            }
-          });
+          activeFilter = btn.getAttribute('data-filter') || 'all';
+          visibleCount = initialVisible;
+          renderCards();
         });
       });
+
+      loadMoreBtn?.addEventListener('click', () => {
+        visibleCount += loadStep;
+        renderCards();
+      });
+
+      renderCards();
     });
   </script>
 </body>
