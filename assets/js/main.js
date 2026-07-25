@@ -46,14 +46,6 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       pageLoader.classList.add('hidden');
       setTimeout(() => pageLoader.remove(), 600);
-    }, 1000); // Quick 1s display for smooth loading UX
-  }
-
-  const loadingScreen = document.getElementById('loading-screen');
-  if (loadingScreen) {
-    setTimeout(() => {
-      loadingScreen.classList.add('fade-out');
-      setTimeout(() => loadingScreen.remove(), 600);
-    }, 1000); // Quick 1s display for results page loading screen
+    }, 1400); // 1.4s display for smooth loading UX
   }
 });

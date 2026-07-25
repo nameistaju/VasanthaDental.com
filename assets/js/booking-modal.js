@@ -205,7 +205,7 @@ Thank you.`;
       }
 
       const encoded = encodeURIComponent(waMessage);
-      const waUrl = `https://wa.me/919703294358?text=${encoded}`;
+      const waUrl = `https://wa.me/917095667096?text=${encoded}`;
 
       closeModal();
       window.open(waUrl, '_blank');
