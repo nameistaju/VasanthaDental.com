@@ -46,6 +46,6 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       pageLoader.classList.add('hidden');
       setTimeout(() => pageLoader.remove(), 600);
-    }, 1400); // 1.4s display for smooth loading UX
+    }, 300); // Quick 300ms display after load for smooth transition
   }
 });
