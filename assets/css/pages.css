@@ -997,6 +997,14 @@
   display: block;
 }
 
+/* Highlighted VIP items — show full image, no cropping */
+.gallery-item.highlighted .gallery-img-container img {
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center;
+  background: #111827;
+}
+
 .gallery-item:hover img {
   /* Disabled hover zoom */
 }
@@ -1004,6 +1012,46 @@
 /* Clean dark gradient overlay - disabled */
 .gallery-hover-overlay {
   display: none !important;
+}
+
+/* ---- VIP / Highlighted gallery item name caption ---- */
+.gallery-name-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10, 10, 30, 0.92) 0%, rgba(10, 10, 30, 0.6) 60%, transparent 100%);
+  padding: 28px 14px 14px 14px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 3;
+}
+
+.gallery-name-badge .badge-star {
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+
+.gallery-name-badge .badge-text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+  letter-spacing: 0.01em;
+}
+
+.gallery-name-badge .badge-text span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: rgba(255,220,100,0.95);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .gallery-item:hover .gallery-hover-overlay {
